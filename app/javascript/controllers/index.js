@@ -9,3 +9,9 @@ eagerLoadControllersFrom("controllers", application)
 // Lazy load controllers as they appear in the DOM (remember not to preload controllers in import map!)
 // import { lazyLoadControllersFrom } from "@hotwired/stimulus-loading"
 // lazyLoadControllersFrom("controllers", application)
+const h4 = document.querySelector("h4");
+const letters = document.querySelector("@letters");
+letters.forEach((letter) => {
+  const bootstrapLetter = letter.classList.add("bg-primary text-white m-3")
+  h4.insertAdjacentHTML("beforeend", bootstrapLetter)
+});
